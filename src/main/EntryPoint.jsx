@@ -8,7 +8,7 @@ import {
   ConnectedRouter,
 } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
-import App from "../components/App";
+import GameScreenTop from "../components/GameScreenTop";
 
 const createRootReducer = (objHistory) => {
   return combineReducers({
@@ -35,7 +35,7 @@ const entry = () => {
       <ConnectedRouter history={history}>
         <Switch>
           <Route path="/" exact>
-            <App />
+            <GameScreenTop />
           </Route>
         </Switch>
       </ConnectedRouter>

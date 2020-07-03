@@ -4,7 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
-function App() {
+const MenuBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -14,6 +14,6 @@ function App() {
       </Toolbar>
     </AppBar>
   );
-}
+};
 
-export default App;
+export default MenuBar;

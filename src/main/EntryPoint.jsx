@@ -1,3 +1,5 @@
+import React from "react";
+import { Provider } from "react-redux";
 import { createBrowserHistory } from "history";
 import { combineReducers, compose, createStore, applyMiddleware } from "redux";
 import {
@@ -5,8 +7,8 @@ import {
   routerMiddleware,
   ConnectedRouter,
 } from "connected-react-router";
-import { Switch } from "@material-ui/core";
-import { Route } from "react-router";
+import { Switch, Route } from "react-router-dom";
+import App from "../components/App";
 
 const createRootReducer = (objHistory) => {
   return combineReducers({
@@ -32,8 +34,9 @@ const entry = () => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <Switch>
-          <Route path="/" exact></Route>
-          <Route path="/game"></Route>
+          <Route path="/" exact>
+            <App />
+          </Route>
         </Switch>
       </ConnectedRouter>
     </Provider>

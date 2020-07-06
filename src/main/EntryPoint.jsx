@@ -9,10 +9,12 @@ import {
 } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
 import GameScreenTop from "../components/GameScreenTop";
+import gameReducer from "../reducers/GameReducer";
 
 const createRootReducer = (objHistory) => {
   return combineReducers({
     router: connectRouter(objHistory),
+    game: gameReducer,
   });
 };
 

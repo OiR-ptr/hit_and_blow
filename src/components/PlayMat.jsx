@@ -1,23 +1,18 @@
 import React from "react";
-import { Container, Box, makeStyles } from "@material-ui/core";
+import { Container, Box } from "@material-ui/core";
+import NumberDial from "./parts/NumberDial";
 
-const useStyles = makeStyles({
-  root: {
-    height: 48,
-    width: 48,
-  },
-});
-
-const PlayMat = () => {
-  const classes = useStyles();
+const PlayMat = (props) => {
+  const { selectedNumber, dial, setNumber } = props;
 
   return (
     <Container maxWidth="sm" style={{ backgroundColor: "yellow" }}>
-      <Box display="flex" justifyContent="center">
-        <Box border={1} className={classes.root}></Box>
-        <Box border={1} className={classes.root}></Box>
-        <Box border={1} className={classes.root}></Box>
-        <Box border={1} className={classes.root}></Box>
+      <Box display="flex" justifyContent="center" m={2}>
+        <NumberDial
+          dial={dial}
+          dialLength={dial.length}
+          onSetNumber={(position) => setNumber(selectedNumber, position)}
+        />
       </Box>
     </Container>
   );

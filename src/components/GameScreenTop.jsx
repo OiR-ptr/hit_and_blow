@@ -1,7 +1,7 @@
 import React from "react";
 import MenuBar from "./MenuBar";
-import NumberInventory from "./NumberInventory";
-import PlayMat from "./PlayMat";
+import NumberInventory from "../containers/NumberInventoryContainer";
+import PlayMat from "../containers/PlayMatContainer";
 
 const GameScreen = () => {
   return (

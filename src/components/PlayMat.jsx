@@ -58,7 +58,7 @@ const PlayMat = (props) => {
             <Typography align="center">Selected</Typography>
             <center>
               <Avatar
-                alt="aho"
+                alt="selected"
                 src={dialSrc[selectedNumber]}
                 className={classes.root}
               ></Avatar>

@@ -46,14 +46,15 @@ const PlayMat = (props) => {
   }, []);
 
   return (
-    <Container maxWidth="sm" style={{ backgroundColor: "yellow" }}>
+    <Container maxWidth="sm" style={{ backgroundColor: "aliceblue" }}>
       <Grid container spacing={3}>
         <Grid item xs={3}>
           <Box
             flex="wrap"
             justifyContent="center"
             alignItems="center"
-            style={{ backgroundColor: "red" }}
+            style={{ backgroundColor: "lavender" }}
+            m={1}
           >
             <Typography align="center">Selected</Typography>
             <center>
@@ -66,7 +67,7 @@ const PlayMat = (props) => {
           </Box>
         </Grid>
         <Grid item xs={9}>
-          <Container maxWidth="sm" style={{ backgroundColor: "purple" }}>
+          <Container maxWidth="sm">
             <Box display="flex" justifyContent="center">
               <NumberDial
                 dial={dial}

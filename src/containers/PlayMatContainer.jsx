@@ -1,7 +1,7 @@
 import React from "react";
 import PlayMat from "../components/PlayMat";
 import { useSelector, useDispatch } from "react-redux";
-import { setNumberEvent } from "../actions/GameActions";
+import { setNumberEvent, checkNumbersEvent } from "../actions/GameActions";
 
 const useStateProps = () => {
   const selectedNumber = useSelector((state) => {
@@ -28,8 +28,16 @@ const useDispatchProps = () => {
     [dispatch]
   );
 
+  const checkNumbers = React.useCallback(
+    (numbers) => {
+      dispatch(checkNumbersEvent(numbers));
+    },
+    [dispatch]
+  );
+
   return {
     setNumber,
+    checkNumbers,
   };
 };
 

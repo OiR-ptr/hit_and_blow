@@ -6,6 +6,7 @@ import {
   Typography,
   Avatar,
   makeStyles,
+  Button,
 } from "@material-ui/core";
 import NumberDial from "./parts/NumberDial";
 import Number0 from "../_images/number_0.png";
@@ -27,7 +28,7 @@ const classes = makeStyles({
 });
 
 const PlayMat = (props) => {
-  const { selectedNumber, dial, setNumber } = props;
+  const { selectedNumber, dial, setNumber, checkNumbers } = props;
   const [dialSrc, setDialSrc] = React.useState([]);
 
   React.useEffect(() => {
@@ -66,7 +67,7 @@ const PlayMat = (props) => {
             </center>
           </Box>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={6}>
           <Container maxWidth="sm">
             <Box display="flex" justifyContent="center">
               <NumberDial
@@ -76,6 +77,15 @@ const PlayMat = (props) => {
             </Box>
           </Container>
         </Grid>
+        <Box display="flex" justifyContent="center" alignItems="flex-end" m={1}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => checkNumbers(dial)}
+          >
+            Check
+          </Button>
+        </Box>
       </Grid>
     </Container>
   );

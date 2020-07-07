@@ -16,7 +16,6 @@ const NumberInventory = (props) => {
 
   return (
     <Container maxWidth="sm" style={{ backgroundColor: "#cfe8fc" }}>
-      <div>NumberInventory!</div>
       <Box display="flex" flexWrap="wrap" m={2}>
         <IconButton aria-label="number-0" onClick={() => selectNumber(0)}>
           <Avatar alt="0_Number" src={Number0} />

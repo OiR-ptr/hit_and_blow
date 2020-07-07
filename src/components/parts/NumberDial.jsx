@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 
 const NumberDial = (props) => {
   const classes = useStyles();
-  const { dial, dialLength, onSetNumber } = props;
+  const { dial, onSetNumber } = props;
 
   const [dialSrc, setDialSrc] = React.useState([]);
 
@@ -41,7 +41,7 @@ const NumberDial = (props) => {
       Number8,
       Number9,
     ]);
-  }, [dialLength]);
+  }, []);
 
   const NumeralPad = (props) => {
     const { number, dialSrc, onClickNumeral } = props;

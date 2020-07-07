@@ -1,7 +1,7 @@
 import { SELECT_NUMBER, SET_NUMBER } from "../actions/GameActions";
 
 const initialState = {
-  selected: undefined,
+  selected: 0,
   dial: [0, 0, 0, 0],
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ListItem,
   ListItemAvatar,
@@ -18,17 +18,30 @@ import Number9 from "../../_images/number_9.png";
 
 const HistoryListItem = (props) => {
   const { dial } = props;
+  const [dialSrc, setDialSrc] = useState([]);
 
   useEffect(() => {
-    console.log(dial);
-  }, [dial]);
+    setDialSrc([
+      Number0,
+      Number1,
+      Number2,
+      Number3,
+      Number4,
+      Number5,
+      Number6,
+      Number7,
+      Number8,
+      Number9,
+    ]);
+  }, []);
 
   return (
     <ListItem>
-      {dial.numbers.map((_, idx) => {
+      {dial.numbers.map((val, idx) => {
+        console.log(val);
         return (
           <ListItemAvatar key={`numava_${idx}`}>
-            <Avatar alt="alt" />
+            <Avatar alt="alt" src={dialSrc[val]} />
           </ListItemAvatar>
         );
       })}

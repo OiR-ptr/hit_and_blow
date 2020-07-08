@@ -10,18 +10,13 @@ const HistoryLog = (props) => {
     <Box m={3}>
       <Container maxWidth="sm" style={{ backgroundColor: "purple" }}>
         <Grid container spacing={3}>
-          <Grid item xs={9}>
+          <Grid item xs={12}>
             <Box m={1} style={{ backgroundColor: "aliceblue" }}>
               <List>
                 {histories.map((history) => {
                   return <HistoryListItem key={history.key} dial={history} />;
                 })}
               </List>
-            </Box>
-          </Grid>
-          <Grid item xs={3}>
-            <Box m={1} style={{ backgroundColor: "yellow" }}>
-              <div>aaaa</div>
             </Box>
           </Grid>
         </Grid>

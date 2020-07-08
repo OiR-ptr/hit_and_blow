@@ -4,6 +4,7 @@ import NumberInventory from "../containers/NumberInventoryContainer";
 import PlayMat from "../containers/PlayMatContainer";
 import { useDispatch } from "react-redux";
 import { initializeGameruleEvent } from "../actions/GameActions";
+import HistoryLog from "./HistoryLog";
 
 const GameScreen = (props) => {
   const { initializeGameRule } = props;
@@ -17,6 +18,7 @@ const GameScreen = (props) => {
       <MenuBar />
       <NumberInventory />
       <PlayMat />
+      <HistoryLog />
     </>
   );
 };

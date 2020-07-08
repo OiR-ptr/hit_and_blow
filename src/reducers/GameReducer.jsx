@@ -76,6 +76,7 @@ export default function gameReducer(state = initialState, action) {
       const history = state.history.slice();
       history.splice(0, 0, {
         numbers: action.numbers,
+        key: history.length + 1,
         hit,
         blow,
       });

@@ -27,7 +27,7 @@ const HistoryLog = (props) => {
 
 const useStateProps = () => {
   const histories = useSelector((state) => state.game.history);
-  console.log(histories);
+  // console.log(histories);
   return {
     histories,
   };

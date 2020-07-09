@@ -38,7 +38,6 @@ const HistoryListItem = (props) => {
   return (
     <ListItem>
       {dial.numbers.map((val, idx) => {
-        console.log(val);
         return (
           <ListItemAvatar key={`numava_${idx}`}>
             <Avatar alt="alt" src={dialSrc[val]} />

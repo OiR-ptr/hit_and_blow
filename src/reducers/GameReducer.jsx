@@ -58,19 +58,25 @@ export default function gameReducer(state = initialState, action) {
       });
 
       const hit = pairs.filter((item) => item.isHit).length;
-      const notHitAnswer = pairs.filter((value) => !value.isHit);
       const notHitDial = state.dial.filter((_, idx) => !pairs[idx].isHit);
 
       notHitDial.forEach((value) => {
+        const notHitAnswer = pairs.filter((value) => !value.isHit);
         const blowItem = notHitAnswer.filter((val) => {
           return val.value === value && !val.isBlowed;
         });
         if (blowItem.length) {
-          notHitAnswer[blowItem[0].idx].isBlowed = true;
+          try {
+            pairs[blowItem[0].idx].isBlowed = true;
+          } catch (ex) {
+            debugger;
+            console.error(state.dial);
+            console.error(pairs);
+          }
         }
       });
 
-      const blow = notHitAnswer.filter((item) => item.isBlowed).length;
+      const blow = pairs.filter((item) => item.isBlowed).length;
       // console.log(`hit: ${hit}, blow: ${blow}, answer: ${state.answer}`);
 
       const history = state.history.slice();
